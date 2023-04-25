@@ -1,0 +1,271 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: violet;
+    color: black;
+}
+
+.navBar {
+    background: blueviolet;
+    margin: 0;
+    margin-block-end: 20px;
+    color: black;
+    border: 4px double black;
+    border-radius: 10px;
+    width:100%;
+}
+
+.navBar > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.navImageContainer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.navImageContainer > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px black;
+
+    transition: all 250ms ease;
+}
+
+.navImageContainer > img:hover {
+    transform: rotate(360deg);
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: 1rem;
+    cursor: pointer;
+
+    transition: all 500ms ease;
+}
+
+.title:hover::after {
+    content: "❤w❤";
+}
+
+.sectionPhoto > div > img,
+.sectionWeed > div > img,
+.sectionChill > div > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
+.subtitle {
+    text-align: center;
+    margin-block: 10px;
+    font-size: 30px;
+}
+
+
+.photo {
+    filter: blur(1px);
+    transition: all ease 500ms;
+
+    animation: balance linear infinite 1.5s;
+}
+
+@keyframes balance {
+    0%{ transform: translateY(0px);}
+    20%{ transform: translateY(-2px);}
+    40%{ transform: translateY(-5px);}
+    60%{ transform: translateY(-10px);}
+    80%{ transform: translateY(-5px);}
+    100%{ transform: translateY(0px);}
+    
+}
+
+.photo:hover {
+    filter: blur(0px) contrast(120%) brightness(105%);
+    box-shadow: 0 0 15px black;
+    transform: scale(1.1);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 0.5fr); */
+    margin-block-end: 30px;
+}
+
+.tey {
+    grid-row: 1/4;
+    grid-column: 1/2;
+    border: 3px double white;
+    border-radius: 4px;
+    padding: 10px;
+    margin-inline: 10px;
+}
+
+.osiel {
+  grid-column: 3/3;
+  grid-row: 1/4;
+  border: 3px double white;
+  border-radius: 4px;
+  padding: 10px;
+  margin-inline: 10px;
+     
+}
+
+.sectionPhoto {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: fit-content;
+    margin-block-end: 30px;
+}
+
+.sectionWeed {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: max-content;
+    margin-block-end: 30px;
+}
+
+.sectionChill {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    height: max-content;
+}
+
+
+.sectionPhoto > div,
+.sectionWeed > div,
+.sectionChill > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hearth {
+    color: tomato;
+    cursor: pointer;
+
+    transition: all ease 500ms;
+}
+
+.hearth:hover {
+    filter: drop-shadow(0 0 3px tomato);
+}
+
+.photosDorryContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+}
+
+.photoDorry {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+    opacity: 0;
+
+    transition: all ease 250ms;
+}
+
+.photoDorry:hover {
+    opacity: 1;
+}
+
+.sectionLuna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px double white;
+}
+
+.btn {
+    background: violet;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    border:none;
+
+    transition: all 500ms ease;
+}
+
+.btn:hover {
+    transform: rotate(-5deg);
+    opacity: 0.7;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn > a {
+    text-decoration: none;
+    color: black;
+}
+
+.navDorry {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    display: none;
+    transition: all 500ms ease;
+
+    animation: moving ease-in-out 1.5s infinite;
+}
+
+@keyframes moving {
+    from{ transform: translateX(25px);}
+    to{ transform: translateX(-25px);}
+}
+
+
+.btn:hover ~ .navDorry {
+    display: block;
+}
+
+
+/* Estilos responsivos */
+
+@media (max-width: 1200px) {
+    .navImageContainer {
+        flex-wrap: wrap;
+    }
+
+    .title {
+        font-size: 5vw;
+    }
+
+
+    .sectionPhoto {
+        width: 100%;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sectionLuna > h2 {
+        text-align: center;
+    }
+}

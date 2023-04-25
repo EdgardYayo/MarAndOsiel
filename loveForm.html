@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario del Amor</title>
+    <link rel="stylesheet" href="./loveForm.css">
+</head>
+<body>
+    <button class="btnBack"><a href="./index.html">Volver</a></button>
+    <form id="whoIs">
+        <h1 class="title">Formulario del Amor</h1>
+        <div class="hearthAndPhoto">
+            <p>❤</p>
+            <img src="./imgs/Tey.jpg" alt="tey">
+        </div>
+        <div class="questionContainer">
+            <label>¿Quien eres?</label>
+            <label htmlfor="Osiel">Osiel</label>
+            <input id="Osiel" name="Osiel" value="Osiel" type="checkbox"/>
+            <label htmlfor="Marlen">Marlen</label>
+            <input id="Marlen" name="Marlen" value="Marlen" type="checkbox"/>
+        </div>
+        <div class="btnContainer">
+            <h3>Hola...</h3>
+            <button type="submit">✔</button>
+        </div>
+        <div class="hearthAndPhoto">
+            <img src="./imgs/Osiel.jpg" alt="osiel">
+            <p>❤</p>
+        </div>
+    </form>
+    <form class="questions">
+        <div class="microContainers">
+            <label>¿A quien quieres mas ala Gordi o al Pirillo?</label>
+            <label htmlfor="Modorri">Modorri</label>
+            <input id="Modorri" name="Modorri" value="Modorri" type="checkbox"/>
+            <label htmlfor="Pirillo">Pirillo</label>
+            <input id="Pirillo" name="Pirillo" value="Pirillo" type="checkbox"/>
+            <p id="answer"></p>
+            <img id="puppies" src="./imgs/cachorros.jpg" alt="puppies"/>
+        </div>
+        <div class="microContainers">
+            <label id="birthday" htmlfor="birthday">¿Cuando cumpleaños?</label>
+            <input id="birthday" name="birthday" value="birthday" type="date"/>
+        </div>
+        <div class="microContainers">
+            <label>¿Cual de todos estos no es un apodo de la Gordi?</label>
+            <label>Cachode</label>
+            <input id="Cachode" name="Cachode" value="Cachode" type="checkbox"/>
+            <label>Nonobe</label>
+            <input id="Nonobe" name="Nonobe" value="Nonobe" type="checkbox"/>
+            <label>Modorri</label>
+            <input id="Modorri" name="Modorri" value="Modorri" type="checkbox"/>
+            <label>Papiro</label>
+            <input id="Papiro" name="Papiro" value="Papiro" type="checkbox"/>
+        </div>
+    </form>
+    <script src="./index.js"></script>
+</body>
+</html>
