@@ -18,7 +18,7 @@ let papiro = document.querySelector("#Papiro")
 let reply3 = document.querySelector("#answer3")
 
 
-if (document.title === "Formulario del Amor") {
+if (document.title === "Formulario del Amor ❣") {
    setInterval(() => {
       if (mar.checked === true && osiel.checked === true) {
          return document.querySelector("h3").innerText = `Hola ${osiel.value} y ${mar.value}`;
